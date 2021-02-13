@@ -1,0 +1,15 @@
+Hooks System
+: membuat function component dapat menggunakan state. hook membantu membuat
+  program jadi lebih 'readable'
+
+Fuction pada Hook System
+1. useState = function yang mengizinkan fuction component menggunakan state
+2. useEffect = function yang mengiziknkan function component menggunakan 
+                lifecycle method seperti class component
+3. useRef = function yang mengizikan function component membuat 'ref'
+
+const [activeIndex, setActiveIndex] = useState(null);
+
+activeIndex = state
+setActiveIndex = fungsi untuk mengubah activeIndex
+useState(defaultValue) = fungsi use state default value
