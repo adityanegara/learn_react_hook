@@ -1,6 +1,7 @@
 import React from 'react'
 import Accordion from './Accordion';
 import ExcerciseOne from './ExcerciseOne';
+import SearchBar from './SearchBar';
 const items = [
     {
         id   : 'item1',
@@ -22,6 +23,7 @@ const items = [
 export default () =>{
     return(<div className="container mt-3">
               {/* <Accordion items = {items} test = 'test'/> */}
-              <ExcerciseOne/>
+              {/* <ExcerciseOne/> */}
+              <SearchBar/>
          </div>);
 }
