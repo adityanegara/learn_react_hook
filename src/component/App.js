@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useState, useEffect}from 'react'
 import Accordion from './Accordion';
 import ExcerciseOne from './ExcerciseOne';
 import SearchBar from './SearchBar';
+import Dropdown from './Dropdown';
+
 const items = [
     {
         id   : 'item1',
@@ -20,10 +22,37 @@ const items = [
     }
 ];
 
+const options = [
+    {
+        id    : 'option1',
+        label : 'Crimson Red',
+        value : '#990000'
+    },
+    {
+        id    : 'option2',
+        label : 'Sea Blue',
+        value : '#000029.'
+    },
+    {
+        id    : 'option3',
+        label : 'Forest Green',
+        value : '#003333..'
+    }
+    
+]
+
 export default () =>{
+    const [selected, setSelected] = useState(options[0]);
+
     return(<div className="container mt-3">
               {/* <Accordion items = {items} test = 'test'/> */}
               {/* <ExcerciseOne/> */}
-              <SearchBar/>
+              {/* <SearchBar/> */}
+              <Dropdown 
+                selected = {selected} 
+                onSelectedChange = {setSelected} 
+                options = {options}
+              />
+       
          </div>);
 }

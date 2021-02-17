@@ -21,3 +21,9 @@ B) useEffect Hook
   2. ketika komponen di render pertama kali dan kapanpun komponen di render
   3. ketika komponen di render pertama kali
    dan (Ketika di render ulang dan data yang dimasukan di parameter berubah)
+
+C) Event Bubbling
+  : event-event pada html dom berjalan dari element ke parent-parentnya
+
+D) useRef()
+  : untuk mendapatkan referense pada element DOM
