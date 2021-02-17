@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
 const SearchBar = () =>{
-    const [keyword, setKeyword] = useState('programming');
+    const [keyword, setKeyword] = useState('');
     const [results, setResults] = useState([]);
     const onChangeInput = (keyword) =>{
         setKeyword(keyword);
@@ -35,7 +35,11 @@ const SearchBar = () =>{
        }
        
     }, [keyword])
-    const renderedResults = results.map((result)=>{
+    const test = () =>{
+        console.log("test");
+    }
+    const renderedResults = results.map((result)=>{ 
+        console.log("rendered result test");
         return (
         <div key={result.pageid} className="item">
             <div className="right floated content">
@@ -55,6 +59,7 @@ const SearchBar = () =>{
     });
     return (
         <div>
+            
             <div className= "ui form">
                 <div className="field">
                     <label>Enter Search Term</label>
@@ -67,6 +72,7 @@ const SearchBar = () =>{
             </div>
             <div className="ui celled list">
                 {renderedResults}
+                
             </div>
         </div>
     )

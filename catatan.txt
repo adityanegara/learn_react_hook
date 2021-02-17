@@ -13,3 +13,11 @@ const [activeIndex, setActiveIndex] = useState(null);
 activeIndex = state
 setActiveIndex = fungsi untuk mengubah activeIndex
 useState(defaultValue) = fungsi use state default value
+
+B) useEffect Hook
+: Mengizinkan function component menggunakan lifecycle method
+  untuk menjalankan kode ketika pada skenario berikut
+  1. ketika komponen di render pertama kali
+  2. ketika komponen di render pertama kali dan kapanpun komponen di render
+  3. ketika komponen di render pertama kali
+   dan (Ketika di render ulang dan data yang dimasukan di parameter berubah)
