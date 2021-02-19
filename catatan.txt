@@ -27,3 +27,6 @@ C) Event Bubbling
 
 D) useRef()
   : untuk mendapatkan referense pada element DOM
+
+E) google translate key
+   :  
