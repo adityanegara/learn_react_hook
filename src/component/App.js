@@ -4,7 +4,8 @@ import ExcerciseOne from './ExcerciseOne';
 import SearchBar from './SearchBar';
 import Dropdown from './Dropdown';
 import Translate from './Translate';
-
+import Header from './Header';
+import Route from './Route';
 const items = [
     {
         id   : 'item1',
@@ -42,19 +43,30 @@ const options = [
     
 ]
 
-export default () =>{
-    // const [selected, setSelected] = useState(options[0]);
 
+
+export default () =>{
+    const [selected, setSelected] = useState(options[0]);
     return(<div className="container mt-3">
-              {/* <Accordion items = {items} test = 'test'/> */}
-              {/* <ExcerciseOne/> */}
-              {/* <SearchBar/> */}
-              {/* <Dropdown 
-                selected = {selected} 
-                onSelectedChange = {setSelected} 
-                options = {options}
-              /> */}
-              <Translate/>
-       
+              <Header></Header>
+              <Route path = "/">
+                    <Accordion items = {items}></Accordion>
+              </Route>
+              <Route path = "/list">
+                    <SearchBar/>
+              </Route>
+              <Route path = "/dropdown">
+                    <Dropdown 
+                    label = "Select a color"
+                    options = {options}
+                    selected = {selected}
+                    onSelectedChange = {setSelected}/>
+              </Route>
+              <Route path = "/translate">
+                    <Translate/>
+              </Route>
+              
+
+                   
          </div>);
 }
